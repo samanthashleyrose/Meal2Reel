@@ -14,14 +14,9 @@ function getRandomRecipe() {
             for(x = 0; x<firstRecipe.length;x++){
                 console.log(firstRecipe[x].nameClean)
             }
-            
       	})
 }
 getRandomRecipe()
-
-
-
-
 
 //NOTE: Full recipe nutrition information is limited to 400 calls/month or 4000 calls/month for individual line analysis
 
@@ -49,5 +44,5 @@ var ingredientCaloriesAdjusted = (ingredientCaloriesUnadjusted/ingredientWeight)
 console.log(ingredientCaloriesAdjusted)
 })
 }
-getIngredientNutrition
+// getIngredientNutrition()
 
