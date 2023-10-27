@@ -3,17 +3,29 @@ var searchTags = "pizza"
 var randomRecipeURL = "http://api.spoonacular.com/recipes/random?tags=" + searchTags+ "&number=5&apiKey=" + spoonAPIKey
 
 const recipeSubmitBtn = document.getElementById('recipe-submit-btn');
+const recipeRefreshBtn = document.getElementById('refresh-recipe-btn');
 const movieSubmitBtn = document.getElementById('genre-submit-btn');
+const movieRefreshBtn = document.getElementById('refresh-movie-btn');
 
 // Event Listener for Recipe Submit Button
 function handleRecipeSubmitBtn() {
     recipeSubmitBtn.addEventListener('click');
-}
+};
 
 // Event Listener for Movie Submit Button
 function handleMovieSubmitBtn() {
     movieSubmitBtn.addEventListener('click');
-}
+};
+
+// Event Listener for Recipe Refresh Button
+function handleRecipeRefreshBtn() {
+    recipeRefreshBtn.addEventListener('click');
+};
+
+// Event Listener for Movie Refresh Button
+function handleRecipeRefreshBtn() {
+    movieRefreshBtn.addEventListener('click');
+};
 
 function getRandomRecipe() {
     fetch(randomRecipeURL)
