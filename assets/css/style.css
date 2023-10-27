@@ -2,8 +2,10 @@
     margin: 0%;
 }
 
-body {
+html {
     background-color: rgb(84, 74, 87);
+    background: linear-gradient(to top, rgb(93, 75, 102), rgb(46, 26, 55));
+    height: 100%;
 }
 
 /* HEADER */
