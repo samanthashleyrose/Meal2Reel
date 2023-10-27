@@ -2,27 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
-    <h1>CHRAMI</h1>
-    <form>
-      <label for="input">enter recipe word</label>
-      <br>
-      <input type="text">
-      <br>
-      <button id="submit-btn">SUBMIT</button>
-      <button>REFRESH</button>
-    </form>
+    <h1 id="title">CHRAMI</h1>
+    <p id="info">let's add a description here!</p>
   </header>
 
   <main>
-    <div>
-      <p>here where recipe populates</p>
+    <!-- RECIPE GENERATOR -->
+    <div class="recipe-form-container">
+      <form>
+        <label for="input">enter recipe word</label>
+        <br>
+        <input type="text">
+        <br>
+        <button id="recipe-submit-btn">SUBMIT</button>
+        <button id="refresh-recipe-btn">REFRESH</button>
+      </form>
+      <div class="recipe-container">
+        <p class="recipe-card">here where recipe populates</p>
+      </div>
     </div>
-    <div>
-      <p>here where nutritional analysis populates</p>
+    <!-- MOVIE GENERATOR -->
+    <div class="movie-form-container">
+      <form>
+        <label for="input">enter movie genre</label>
+        <br>
+        <input type="text">
+        <br>
+        <button id="genre-submit-btn">SUBMIT</button>
+        <button id="refresh-movie-btn">REFRESH</button>
+      </form>
+      <div class="movie-container">
+        <p class="movie-card">here where movie populates</p>
+      </div>
     </div>
   </main>
 
