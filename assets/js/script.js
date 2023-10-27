@@ -1,11 +1,12 @@
-var spoonAPIKey = "919c25609b004e1998fd520ad00d9a2d"
-var searchTags = "pizza"
-var randomRecipeURL = "http://api.spoonacular.com/recipes/random?tags=" + searchTags+ "&number=5&apiKey=" + spoonAPIKey
-
 const recipeSubmitBtn = document.getElementById('recipe-submit-btn');
 const recipeRefreshBtn = document.getElementById('refresh-recipe-btn');
 const movieSubmitBtn = document.getElementById('genre-submit-btn');
 const movieRefreshBtn = document.getElementById('refresh-movie-btn');
+var edamamAppID = "ed1b726e"
+var edamamAPIKey = "d073615b79a9ae208a7b60fb0981a82d"
+var searchQuery = "pizza"
+var watchModeAPIKey = "xsVPrQhegCVFwP7yQKzZsWsGMKT7VMQE6ZiwJmgi"
+var movieGenre = "Action"
 
 // Event Listener for Recipe Submit Button
 function handleRecipeSubmitBtn() {
@@ -26,51 +27,29 @@ function handleRecipeRefreshBtn() {
 function handleRecipeRefreshBtn() {
     movieRefreshBtn.addEventListener('click');
 };
-
-function getRandomRecipe() {
-    fetch(randomRecipeURL)
-        .then(response => response.json())
-        .then(function (data) {
-            console.log(data)
-            var firstRecipe = data.recipes[0].extendedIngredients
-            console.log(firstRecipe)
-            console.log(firstRecipe.length)
-            for(x = 0; x<firstRecipe.length;x++){
-                console.log(firstRecipe[x].nameClean)
-            }
-            
-      	})
-}
-getRandomRecipe()
-
-
-
-
-
-//NOTE: Full recipe nutrition information is limited to 400 calls/month or 4000 calls/month for individual line analysis
-
-var edamamAppID = "16e6d8f9"
-var edamamAPIKey = "2155fb847350ae7c5c1e7ed9e4cab779"
-var ingredient = "egg"
-var nutritionURL = "https://api.edamam.com/api/nutrition-details?app_id=" + edamamAppID + "&app_key=" + edamamAPIKey + "&nutrition-type=logging&ingr=" + ingredient
-
-function getIngredientNutrition() {
-fetch(nutritionURL)
+var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q="+searchQuery+"&app_id="+edamamAppID+"&app_key=" + edamamAPIKey +"&random=true"
+        
+function getEdamamRecipe() {
+fetch(edamamRecipeURL)
 .then(function (response) {
-return response.json()
-})
-.then(function (data) {
-console.log(data)
-
-        var ingredientCaloriesUnadjusted = data.calories
-        console.log(ingredientCaloriesUnadjusted)
-
-    var ingredientWeight = data.totalWeight
-        console.log(ingredientWeight)
-
-//adjust calories by weight (gives ingredient calories/gram)
-var ingredientCaloriesAdjusted = (ingredientCaloriesUnadjusted/ingredientWeight)
-console.log(ingredientCaloriesAdjusted)
-})
+    return response.json()
+    })
+    .then(function (data) {
+        console.log(data)})
 }
-getIngredientNutrition
+
+var movieURL = 'https://api.watchmode.com/v1/list-titles/?append_to_response=sources&apiKey=' + watchModeAPIKey + "&genres="+movieGenre
+function getMovie() {
+    fetch(movieURL)
+    .then(function (apple){
+        return apple.json()
+    })
+    .then(function (banana){
+        console.log(banana)
+        var randomMovieNumber = Math.floor(Math.random() * banana.titles.length)
+        console.log(randomMovieNumber)
+        console.log(banana.titles[randomMovieNumber])
+    })
+}
+getMovie()
+        
