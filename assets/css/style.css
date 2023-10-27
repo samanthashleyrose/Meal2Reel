@@ -2,19 +2,29 @@
     margin: 0%;
 }
 
+body {
+    background-color: rgb(84, 74, 87);
+}
+
+/* HEADER */
 header {
     text-align: center;
     margin: 5%;
 }
 
+#title {
+    font-size: 4rem;
+}
+
+#info {
+    font-size: 1.5rem;
+}
+
+/* MAIN - DISPLAYS */
+
 main {
     margin: 5%;
     text-align: center;
-}
-
-/* RECIPE DISPLAY */
-.recipe-container {
-    margin: 5%;
 }
 
 form {
@@ -24,9 +34,57 @@ form {
 label,
 input {
     margin: 1%;
+    border-radius: 10px;
+}
+
+/* RECIPE DISPLAY */
+.recipe-form-container {
+    margin: 5%;
+}
+
+.recipe-container {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe-card {
+    background-color: rgba(151, 150, 150, 0.751);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#recipe-submit-btn,
+#refresh-recipe-btn {
+    background-color: rgb(157, 157, 225);
+    border: none;
+    border-radius: 10px;
+    padding: 1%;
 }
 
 /* MOVIE DISPLAY */
-.genre-container {
+.movie-form-container {
     margin: 5%;
+}
+
+.movie-container {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    background-color: rgba(151, 150, 150, 0.751);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#genre-submit-btn,
+#refresh-movie-btn {
+    background-color: rgb(157, 157, 225);
+    border: none;
+    border-radius: 10px;
+    padding: 1%;
 }

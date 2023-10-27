@@ -9,37 +9,37 @@
 <body>
   <!-- HEADER -->
   <header>
-    <h1>CHRAMI</h1>
-    <p>lets add a description here!</p>
+    <h1 id="title">CHRAMI</h1>
+    <p id="info">let's add a description here!</p>
   </header>
 
   <main>
     <!-- RECIPE GENERATOR -->
-    <div class="recipe-container">
+    <div class="recipe-form-container">
       <form>
         <label for="input">enter recipe word</label>
         <br>
         <input type="text">
         <br>
         <button id="recipe-submit-btn">SUBMIT</button>
-        <button>REFRESH</button>
+        <button id="refresh-recipe-btn">REFRESH</button>
       </form>
-      <div>
-        <p>here where recipe populates</p>
+      <div class="recipe-container">
+        <p class="recipe-card">here where recipe populates</p>
       </div>
     </div>
     <!-- MOVIE GENERATOR -->
-    <div class="movie-container">
+    <div class="movie-form-container">
       <form>
         <label for="input">enter movie genre</label>
         <br>
         <input type="text">
         <br>
         <button id="genre-submit-btn">SUBMIT</button>
-        <button>REFRESH</button>
+        <button id="refresh-movie-btn">REFRESH</button>
       </form>
-      <div>
-        <p>here where movie populates</p>
+      <div class="movie-container">
+        <p class="movie-card">here where movie populates</p>
       </div>
     </div>
   </main>
