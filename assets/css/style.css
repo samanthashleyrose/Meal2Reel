@@ -1,0 +1,32 @@
+* {
+    margin: 0%;
+}
+
+header {
+    text-align: center;
+    margin: 5%;
+}
+
+main {
+    margin: 5%;
+    text-align: center;
+}
+
+/* RECIPE DISPLAY */
+.recipe-container {
+    margin: 5%;
+}
+
+form {
+    margin: 5%;
+}
+
+label,
+input {
+    margin: 1%;
+}
+
+/* MOVIE DISPLAY */
+.genre-container {
+    margin: 5%;
+}

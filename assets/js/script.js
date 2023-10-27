@@ -2,6 +2,18 @@ var spoonAPIKey = "919c25609b004e1998fd520ad00d9a2d"
 var searchTags = "pizza"
 var randomRecipeURL = "http://api.spoonacular.com/recipes/random?tags=" + searchTags+ "&number=5&apiKey=" + spoonAPIKey
 
+const recipeSubmitBtn = document.getElementById('recipe-submit-btn');
+const movieSubmitBtn = document.getElementById('genre-submit-btn');
+
+// Event Listener for Recipe Submit Button
+function handleRecipeSubmitBtn() {
+    recipeSubmitBtn.addEventListener('click');
+}
+
+// Event Listener for Movie Submit Button
+function handleMovieSubmitBtn() {
+    movieSubmitBtn.addEventListener('click');
+}
 
 function getRandomRecipe() {
     fetch(randomRecipeURL)
@@ -50,4 +62,3 @@ console.log(ingredientCaloriesAdjusted)
 })
 }
 getIngredientNutrition
-
