@@ -37,10 +37,14 @@ form {
     margin: 5%;
 }
 
-label,
-input {
+label {
     margin: 1%;
+    color: rgb(201, 185, 211);
+}
+input {
+    margin: 2%;
     border-radius: 10px;
+    width: 32%;
 }
 
 /* RECIPE DISPLAY */
@@ -59,17 +63,20 @@ input {
 }
 
 .recipe-card {
-    background-color: rgba(151, 150, 150, 0.751);
+    background-color: rgba(220, 191, 237, 0.456);
+    color: rgb(42, 37, 46);
     border-radius: 10px;
     padding: 3%;
 }
 
 #recipe-submit-btn,
 #refresh-recipe-btn {
-    background-color: rgb(157, 157, 225);
+    font-family: 'Archivo Black';
+    background-color: rgba(156, 75, 203, 0.51);
+    color: rgba(201, 185, 211, 0.997);
     border: none;
     border-radius: 10px;
-    padding: 1%;
+    padding: 1.5%;
 }
 
 /* MOVIE DISPLAY */
@@ -88,15 +95,18 @@ input {
 }
 
 .movie-card {
-    background-color: rgba(151, 150, 150, 0.751);
+    background-color: rgba(220, 191, 237, 0.456);
+    color: rgb(42, 37, 46);
     border-radius: 10px;
     padding: 3%;
 }
 
 #genre-submit-btn,
 #refresh-movie-btn {
-    background-color: rgb(157, 157, 225);
+    font-family: 'Archivo Black';
+    background-color: rgba(156, 75, 203, 0.51);
+    color: rgba(201, 185, 211, 0.997);
     border: none;
     border-radius: 10px;
-    padding: 1%;
+    padding: 1.5%;
 }
