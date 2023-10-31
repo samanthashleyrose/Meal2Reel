@@ -2,31 +2,27 @@ const recipeSubmitBtn = document.getElementById('recipe-submit-btn');
 const recipeRefreshBtn = document.getElementById('refresh-recipe-btn');
 const movieSubmitBtn = document.getElementById('genre-submit-btn');
 const movieRefreshBtn = document.getElementById('refresh-movie-btn');
-var edamamAppID = "ed1b726e"
-var edamamAPIKey = "d073615b79a9ae208a7b60fb0981a82d"
-var searchQuery = "pizza"
+var edamamAppID = "d55761af"
+var edamamAPIKey = "4dd514756747177099b4472f62002d79"
 var watchModeAPIKey = "xsVPrQhegCVFwP7yQKzZsWsGMKT7VMQE6ZiwJmgi"
 var movieGenre = "Action"
-
-var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q="+searchQuery+"&app_id="+edamamAppID+"&app_key=" + edamamAPIKey +"&random=true"
         
 function getEdamamRecipe() {
-fetch(edamamRecipeURL)
-.then(function (response) {
-    return response.json()
+    var searchQuery = document.getElementById('recipe-input').value
+    var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q="+searchQuery+"&app_id="+edamamAppID+"&app_key=" + edamamAPIKey +"&random=true"
+
+    fetch(edamamRecipeURL)
+        .then(function (response) {
+            return response.json()
     })
-    .then(function (data) {
-        console.log("RECIPE", data)
-        var randomRecipeNumber = Math.floor(Math.random() * data.hits.length)
-        console.log("RANDOM RECIPE NUMBER", randomRecipeNumber);
+        .then(function (data) {
+            console.log("RECIPE", data)
+            var randomRecipeNumber = Math.floor(Math.random() * data.hits.length)
+            console.log("RANDOM RECIPE NUMBER", randomRecipeNumber);
 
         // RECIPE TITLE
         let recipeTitle = data.hits[randomRecipeNumber].recipe.label;
         console.log("RECIPE TITLE", recipeTitle);
-
-        // let populateRecipeTitle = document.createElement('p');
-        // populateRecipeTitle.textContent = recipeTitle;
-        // populateRecipeTitle.setAttribute('class','recipe-card')
 
         // RECIPE IMAGE
         let recipeImage = data.hits[randomRecipeNumber].recipe.image;
@@ -34,16 +30,20 @@ fetch(edamamRecipeURL)
 
         let populateRecipeImage = document.createElement('img');
         populateRecipeImage.setAttribute('src',recipeImage)
-        // populateRecipeImage.setAttribute('class','recipe-card')
 
         // RECIPE LINK 
         let recipeLink = data.hits[randomRecipeNumber].recipe.shareAs;
         console.log("RECIPE LINK", recipeLink);
         
-        let recipeContainer = document.getElementById('recipe-anchor');
-        recipeContainer.textContent = recipeTitle;
-        recipeContainer.setAttribute('href', recipeLink)
-        recipeContainer.appendChild(populateRecipeImage);
+        // POPULATES RECIPE CONTAINER
+        let recipeContainer = document.querySelector('.recipe-container')
+        let recipeCard = document.createElement('a');
+
+        recipeCard.setAttribute('class','recipe-card')
+        recipeCard.textContent = recipeTitle;
+        recipeCard.setAttribute('href', recipeLink);
+        recipeCard.appendChild(populateRecipeImage);
+        recipeContainer.appendChild(recipeCard);
     })
 }
 
@@ -61,8 +61,6 @@ function getMovie() {
         console.log(banana.titles[randomMovieNumber])
     })
 }
-getMovie()       
-getEdamamRecipe();
 
 // Event Listener for Recipe Submit Button
 function handleRecipeSubmitBtn(event) {
