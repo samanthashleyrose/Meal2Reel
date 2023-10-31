@@ -8,25 +8,6 @@ var searchQuery = "pizza"
 var watchModeAPIKey = "xsVPrQhegCVFwP7yQKzZsWsGMKT7VMQE6ZiwJmgi"
 var movieGenre = "Action"
 
-// Event Listener for Recipe Submit Button
-function handleRecipeSubmitBtn() {
-    recipeSubmitBtn.addEventListener('click');
-};
-
-// Event Listener for Movie Submit Button
-function handleMovieSubmitBtn() {
-    movieSubmitBtn.addEventListener('click');
-};
-
-// Event Listener for Recipe Refresh Button
-function handleRecipeRefreshBtn() {
-    recipeRefreshBtn.addEventListener('click');
-};
-
-// Event Listener for Movie Refresh Button
-function handleRecipeRefreshBtn() {
-    movieRefreshBtn.addEventListener('click');
-};
 var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q="+searchQuery+"&app_id="+edamamAppID+"&app_key=" + edamamAPIKey +"&random=true"
         
 function getEdamamRecipe() {
@@ -35,10 +16,39 @@ fetch(edamamRecipeURL)
     return response.json()
     })
     .then(function (data) {
-        console.log(data)})
+        console.log("RECIPE", data)
+        var randomRecipeNumber = Math.floor(Math.random() * data.hits.length)
+        console.log("RANDOM RECIPE NUMBER", randomRecipeNumber);
+
+        // RECIPE TITLE
+        let recipeTitle = data.hits[randomRecipeNumber].recipe.label;
+        console.log("RECIPE TITLE", recipeTitle);
+
+        // let populateRecipeTitle = document.createElement('p');
+        // populateRecipeTitle.textContent = recipeTitle;
+        // populateRecipeTitle.setAttribute('class','recipe-card')
+
+        // RECIPE IMAGE
+        let recipeImage = data.hits[randomRecipeNumber].recipe.image;
+        console.log("RECIPE IMAGE", recipeImage);
+
+        let populateRecipeImage = document.createElement('img');
+        populateRecipeImage.setAttribute('src',recipeImage)
+        // populateRecipeImage.setAttribute('class','recipe-card')
+
+        // RECIPE LINK 
+        let recipeLink = data.hits[randomRecipeNumber].recipe.shareAs;
+        console.log("RECIPE LINK", recipeLink);
+        
+        let recipeContainer = document.getElementById('recipe-anchor');
+        recipeContainer.textContent = recipeTitle;
+        recipeContainer.setAttribute('href', recipeLink)
+        recipeContainer.appendChild(populateRecipeImage);
+    })
 }
 
 var movieURL = 'https://api.watchmode.com/v1/list-titles/?append_to_response=sources&apiKey=' + watchModeAPIKey + "&genres="+movieGenre
+
 function getMovie() {
     fetch(movieURL)
     .then(function (apple){
@@ -51,5 +61,36 @@ function getMovie() {
         console.log(banana.titles[randomMovieNumber])
     })
 }
-getMovie()
-        
+getMovie()       
+getEdamamRecipe();
+
+// Event Listener for Recipe Submit Button
+function handleRecipeSubmitBtn(event) {
+    event.preventDefault()
+    console.log('Recipe Submit Button Clicked');
+    getEdamamRecipe()
+};
+
+// Event Listener for Movie Submit Button
+function handleMovieSubmitBtn(event) {
+    event.preventDefault()
+    console.log('Movie Submit Button Clicked');
+};
+
+// Event Listener for Recipe Refresh Button
+function handleRecipeRefreshBtn(event) {
+    event.preventDefault()
+    console.log('Recipe Refresh Button Clicked');
+};
+
+// Event Listener for Movie Refresh Button
+function handleMovieRefreshBtn(event) {
+    event.preventDefault()
+    console.log('Movie Refresh Button Clicked');
+};
+
+// Button Event Listeners
+recipeSubmitBtn.addEventListener('click', handleRecipeSubmitBtn);
+movieSubmitBtn.addEventListener('click', handleMovieSubmitBtn);
+recipeRefreshBtn.addEventListener('click', handleRecipeRefreshBtn);
+movieRefreshBtn.addEventListener('click', handleMovieRefreshBtn);
