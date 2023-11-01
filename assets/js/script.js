@@ -161,6 +161,16 @@ function getMovie() {
     })
 }
 
+function clearRecipe() {
+    let recipeContainer = document.querySelector('.recipe-container');
+    recipeContainer.textContent = ''
+}
+
+function clearMovie() {
+    let movieContainer = document.querySelector('.movie-container');
+    movieContainer.textContent = ''
+}
+
 // Event Listener for Recipe Submit Button
 function handleRecipeSubmitBtn(event) {
     event.preventDefault()
@@ -179,13 +189,16 @@ function handleMovieSubmitBtn(event) {
 function handleRecipeRefreshBtn(event) {
     event.preventDefault()
     console.log('Recipe Refresh Button Clicked');
+    clearRecipe();
 };
 
 // Event Listener for Movie Refresh Button
 function handleMovieRefreshBtn(event) {
     event.preventDefault()
     console.log('Movie Refresh Button Clicked');
+    clearMovie();
 };
+
 
 // Button Event Listeners
 recipeSubmitBtn.addEventListener('click', handleRecipeSubmitBtn);
