@@ -47,9 +47,10 @@ function getEdamamRecipe() {
 }
 
 function getMovie() {
-    // var movieGenre = document.getElementById('genre-input').value
     var movieGenre = document.getElementById('genre-input').value
     var movieURL = 'https://api.watchmode.com/v1/list-titles/?append_to_response=sources&apiKey=' + watchModeAPIKey + "&genres=" + movieGenre
+    let movieContainer = document.querySelector('.movie-container')
+    let movieCard = document.createElement('div');
 
     fetch(movieURL)
         .then(function (apple) {
@@ -62,18 +63,102 @@ function getMovie() {
             console.log(banana.titles[randomMovieNumber])
 
             // MOVIE TITLE
-            let movieTitle = banana.titles[randomMovieNumber].title;
-            console.log("MOVIE TITLE", movieTitle);
+            let movieTitle = document.createElement('h2');
+            let populateMovieTitle = banana.titles[randomMovieNumber].title;
+            console.log("MOVIE TITLE", populateMovieTitle);
 
             // POPULATES MOVIE CONTAINER
-            let movieContainer = document.querySelector('.movie-container')
-            let movieCard = document.createElement('a');
-
             movieCard.setAttribute('class', 'movie-card');
-            movieCard.textContent = movieTitle;
             movieContainer.appendChild(movieCard);
-        })
+            movieTitle.textContent = populateMovieTitle;
+            movieCard.appendChild(movieTitle);
+    
+        var imbdtag = banana.titles[randomMovieNumber].imdb_id 
+        console.log(imbdtag)
+        var movieInfoURL = "https://api.watchmode.com/v1/title/"+imbdtag+"/details/?apiKey="+watchModeAPIKey+"&append_to_response=sources"
+        fetch(movieInfoURL)
+            .then(function(hello){
+                return hello.json()
+            })
+            .then(function(goodbye){
+            console.log(goodbye)
 
+            // MOVIE POSTER
+            let moviePoster = goodbye.poster;
+            console.log("MOVIE POSTER", moviePoster);
+
+            let populateMoviePoster = document.createElement('img');
+            populateMoviePoster.setAttribute('src', moviePoster);
+
+            // CREATES POSTER DIV
+            let divForPoster = document.createElement('div');
+            movieCard.appendChild(divForPoster);
+            divForPoster.appendChild(populateMoviePoster);
+
+            // MOVIE PLOT
+            let moviePlot = goodbye.plot_overview;
+            console.log("MOVIE PLOT", moviePlot);
+            
+            let populateMoviePlot = document.createElement('p');
+            populateMoviePlot.textContent = moviePlot
+
+            // let unique = []
+            // goodbye.sources.forEach(element => {
+            //     if (!unique.includes(element)) {
+            //         unique.push(element);
+            //     }
+            // });
+            // console.log('UNIQUE ARRAY', unique);
+
+            let newArray = [];
+            let uniqueObject = {};
+
+            for (let i in goodbye.sources) {
+
+                let objName = goodbye.sources[i]['name'];
+
+                uniqueObject[objName] = goodbye.sources[i];
+            };
+
+            for (i in uniqueObject) {
+                newArray.push(uniqueObject[i]);
+            }
+            console.log(newArray);
+            console.log(uniqueObject);
+
+            let divForPlatform = document.createElement('ul');
+
+            // MOVIE STREAMING
+            for (b = 0; b < uniqueObject.length; b++) {
+                
+                let movieStreamingPlatform = uniqueObject[b].name;
+                console.log("MOVIE STREAMING", movieStreamingPlatform);
+                
+                let movieStreamingURL = uniqueObject[b].web_url;
+                console.log("MOVIE STREAMING URL", movieStreamingURL);
+                
+                let populateMovieStreamingInfo = document.createElement('a');
+                populateMovieStreamingInfo.textContent = movieStreamingPlatform
+                populateMovieStreamingInfo.setAttribute('class', 'movie-a')
+                populateMovieStreamingInfo.setAttribute('href',movieStreamingURL);
+                // movieCard.appendChild(populateMovieStreamingInfo);
+
+                // CREATES PLATFORM DIV
+
+                let platformList = document.createElement('li');
+
+                divForPlatform.appendChild(platformList);
+                platformList.appendChild(populateMovieStreamingInfo);
+            }
+            movieCard.appendChild(divForPlatform);
+
+            // POPULATES MOVIE CONTAINER
+            movieCard.setAttribute('class', 'movie-card');
+            movieContainer.appendChild(movieCard);
+            // movieCard.appendChild(populateMoviePoster);
+            
+            })
+    })
 }
 
 // Event Listener for Recipe Submit Button
