@@ -190,6 +190,7 @@ function handleRecipeRefreshBtn(event) {
     event.preventDefault()
     console.log('Recipe Refresh Button Clicked');
     clearRecipe();
+    getEdamamRecipe()
 };
 
 // Event Listener for Movie Refresh Button
@@ -197,8 +198,8 @@ function handleMovieRefreshBtn(event) {
     event.preventDefault()
     console.log('Movie Refresh Button Clicked');
     clearMovie();
+    getMovie();
 };
-
 
 // Button Event Listeners
 recipeSubmitBtn.addEventListener('click', handleRecipeSubmitBtn);
