@@ -102,14 +102,6 @@ function getMovie() {
             let populateMoviePlot = document.createElement('p');
             populateMoviePlot.textContent = moviePlot
 
-            // let unique = []
-            // goodbye.sources.forEach(element => {
-            //     if (!unique.includes(element)) {
-            //         unique.push(element);
-            //     }
-            // });
-            // console.log('UNIQUE ARRAY', unique);
-
             let newArray = [];
             let uniqueObject = {};
 
@@ -123,30 +115,25 @@ function getMovie() {
             for (i in uniqueObject) {
                 newArray.push(uniqueObject[i]);
             }
-            console.log(newArray);
-            console.log(uniqueObject);
 
             let divForPlatform = document.createElement('ul');
 
             // MOVIE STREAMING
-            for (b = 0; b < uniqueObject.length; b++) {
+            for (b = 0; b < newArray.length; b++) {
                 
-                let movieStreamingPlatform = uniqueObject[b].name;
+                let movieStreamingPlatform = newArray[b].name;
                 console.log("MOVIE STREAMING", movieStreamingPlatform);
                 
-                let movieStreamingURL = uniqueObject[b].web_url;
+                let movieStreamingURL = newArray[b].web_url;
                 console.log("MOVIE STREAMING URL", movieStreamingURL);
                 
                 let populateMovieStreamingInfo = document.createElement('a');
                 populateMovieStreamingInfo.textContent = movieStreamingPlatform
                 populateMovieStreamingInfo.setAttribute('class', 'movie-a')
                 populateMovieStreamingInfo.setAttribute('href',movieStreamingURL);
-                // movieCard.appendChild(populateMovieStreamingInfo);
 
                 // CREATES PLATFORM DIV
-
                 let platformList = document.createElement('li');
-
                 divForPlatform.appendChild(platformList);
                 platformList.appendChild(populateMovieStreamingInfo);
             }
@@ -154,10 +141,8 @@ function getMovie() {
 
             // POPULATES MOVIE CONTAINER
             movieCard.setAttribute('class', 'movie-card');
-            movieContainer.appendChild(movieCard);
-            // movieCard.appendChild(populateMoviePoster);
-            
-            })
+            movieContainer.appendChild(movieCard);           
+            });
     })
 }
 
