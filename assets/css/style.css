@@ -2,10 +2,10 @@
     margin: 0%;
 }
 
-html {
+body {
     background-color: rgb(84, 74, 87);
-    background: linear-gradient(to top, rgb(93, 75, 102), rgb(46, 26, 55));
-    height: 100%;
+    background: linear-gradient(to top, rgb(86, 65, 97), rgb(46, 26, 55));
+    background-size: 100vh;
     font-family: 'Archivo Black';
 }
 
@@ -15,19 +15,33 @@ header {
     margin: 5%;
 }
 
+.header-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #title {
     font-size: 4rem;
     color: rgb(201, 185, 211);
 }
 
 #info {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgb(146, 110, 169);
+}
 
+#description {
+    font-size: 1.4rem;
+    color: rgba(201, 185, 211, 0.7);
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
 }
 
 /* MAIN - DISPLAYS */
-
 main {
     margin: 5%;
     text-align: center;
@@ -40,18 +54,37 @@ form {
 label {
     margin: 1%;
     color: rgb(201, 185, 211);
+    font-size: 2rem;
 }
+
 input {
     margin: 2%;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 32%;
+    text-align: center;
+    background-color: rgb(234, 208, 250);
+    font-size: 1rem;
+}
+
+#recipe-submit-btn:hover,
+#refresh-recipe-btn:hover,
+#genre-submit-btn:hover,
+#refresh-movie-btn:hover {
+    background-color: rgba(200, 143, 233, 0.563);
+    /* cursor: pointer; */
+    color: lemonchiffon
+}
+
+button:active {
+    transform: translateY(3px);
+    transition: 100ms;
 }
 
 /* RECIPE DISPLAY */
 .recipe-form-container {
     margin: 5%;
     background-color: rgba(146, 110, 169, 0.134);
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 1%;
 }
 
@@ -64,9 +97,12 @@ input {
 
 .recipe-card {
     background-color: rgba(220, 191, 237, 0.456);
-    color: rgb(42, 37, 46);
+    color: rgb(52, 45, 54);
     border-radius: 10px;
     padding: 3%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #recipe-submit-btn,
@@ -77,13 +113,14 @@ input {
     border: none;
     border-radius: 10px;
     padding: 1.5%;
+    margin: 2%;
 }
 
 /* MOVIE DISPLAY */
 .movie-form-container {
     margin: 5%;
     background-color: rgba(146, 110, 169, 0.134);
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 1%;
 }
 
@@ -109,10 +146,34 @@ input {
     border: none;
     border-radius: 10px;
     padding: 1.5%;
+    margin: 2%;
 }
 
 .movie-a {
     font-family: 'Archivo Black';
     text-align: center;
-    color: black;
+    color: rgb(52, 45, 54);
+}
+
+h2 {
+    color: rgb(52, 45, 54);
+}
+
+img {
+    margin-top: 3%;
+}
+
+li {
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+
+li::marker {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0%;
 }
