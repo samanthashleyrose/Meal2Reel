@@ -187,7 +187,20 @@ function handleMovieRefreshBtn(event) {
 };
 
 // Button Event Listeners
+recipeSubmitBtn.addEventListener('dblclick', (event) => {
+    event.preventDefault();
+});
+movieSubmitBtn.addEventListener('dblclick', (event) => {
+    event.preventDefault();
+})
+recipeRefreshBtn.addEventListener('dblclick', (event) => {
+    event.preventDefault();
+});
+movieRefreshBtn.addEventListener('dblclick', (event) => {
+    event.preventDefault;
+});
 recipeSubmitBtn.addEventListener('click', handleRecipeSubmitBtn);
 movieSubmitBtn.addEventListener('click', handleMovieSubmitBtn);
 recipeRefreshBtn.addEventListener('click', handleRecipeRefreshBtn);
 movieRefreshBtn.addEventListener('click', handleMovieRefreshBtn);
+
