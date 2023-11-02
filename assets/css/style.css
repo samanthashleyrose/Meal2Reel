@@ -71,8 +71,7 @@ input {
 #genre-submit-btn:hover,
 #refresh-movie-btn:hover {
     background-color: rgba(200, 143, 233, 0.563);
-    /* cursor: pointer; */
-    color: lemonchiffon
+    cursor: pointer;
 }
 
 button:active {
@@ -112,6 +111,7 @@ button:active {
     color: rgba(201, 185, 211, 0.997);
     border: none;
     border-radius: 10px;
+    box-shadow: 1px 1px rgba(201, 185, 211, 0.997);
     padding: 1.5%;
     margin: 2%;
 }
@@ -145,6 +145,7 @@ button:active {
     color: rgba(201, 185, 211, 0.997);
     border: none;
     border-radius: 10px;
+    box-shadow: 1px 1px rgba(201, 185, 211, 0.997);
     padding: 1.5%;
     margin: 2%;
 }

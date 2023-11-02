@@ -160,6 +160,7 @@ function clearMovie() {
 function handleRecipeSubmitBtn(event) {
     event.preventDefault()
     console.log('Recipe Submit Button Clicked');
+    clearRecipe();
     getEdamamRecipe()
 };
 
@@ -167,6 +168,7 @@ function handleRecipeSubmitBtn(event) {
 function handleMovieSubmitBtn(event) {
     event.preventDefault()
     console.log('Movie Submit Button Clicked');
+    clearMovie();
     getMovie();
 };
 
