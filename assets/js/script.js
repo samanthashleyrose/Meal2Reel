@@ -19,8 +19,11 @@ function getEdamamRecipe() {
             var randomRecipeNumber = Math.floor(Math.random() * data.hits.length)
             console.log("RANDOM RECIPE NUMBER", randomRecipeNumber);
 
+            clearRecipe();
+
             // RECIPE TITLE
-            let recipeTitle = data.hits[randomRecipeNumber].recipe.label;
+            let recipeTitle = document.createElement('h2');
+            let populateRecipeTitle = data.hits[randomRecipeNumber].recipe.label;
             console.log("RECIPE TITLE", recipeTitle);
 
             // RECIPE IMAGE
@@ -39,10 +42,12 @@ function getEdamamRecipe() {
             let recipeCard = document.createElement('a');
 
             recipeCard.setAttribute('class', 'recipe-card')
-            recipeCard.textContent = recipeTitle;
+            recipeTitle.textContent = populateRecipeTitle;
             recipeCard.setAttribute('href', recipeLink);
+            recipeCard.appendChild(recipeTitle);
             recipeCard.appendChild(populateRecipeImage);
             recipeContainer.appendChild(recipeCard);
+
         })
 }
 
@@ -61,6 +66,8 @@ function getMovie() {
             var randomMovieNumber = Math.floor(Math.random() * banana.titles.length)
             console.log(randomMovieNumber)
             console.log(banana.titles[randomMovieNumber])
+
+            clearMovie();
 
             // MOVIE TITLE
             let movieTitle = document.createElement('h2');
@@ -82,6 +89,8 @@ function getMovie() {
             })
             .then(function(goodbye){
             console.log(goodbye)
+
+            clearMovie();
 
             // MOVIE POSTER
             let moviePoster = goodbye.poster;
@@ -160,7 +169,6 @@ function clearMovie() {
 function handleRecipeSubmitBtn(event) {
     event.preventDefault()
     console.log('Recipe Submit Button Clicked');
-    clearRecipe();
     getEdamamRecipe()
 };
 
@@ -168,7 +176,6 @@ function handleRecipeSubmitBtn(event) {
 function handleMovieSubmitBtn(event) {
     event.preventDefault()
     console.log('Movie Submit Button Clicked');
-    clearMovie();
     getMovie();
 };
 
