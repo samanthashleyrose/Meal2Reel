@@ -15,6 +15,13 @@ header {
     margin: 5%;
 }
 
+.header-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #title {
     font-size: 4rem;
     color: rgb(201, 185, 211);
@@ -23,14 +30,15 @@ header {
 #info {
     font-size: 2rem;
     color: rgb(146, 110, 169);
-
 }
 
 #description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: rgba(201, 185, 211, 0.7);
-    margin-top: 30px;
-    margin-bottom: -50px;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
 }
 
 /* MAIN - DISPLAYS */
@@ -46,7 +54,7 @@ form {
 label {
     margin: 1%;
     color: rgb(201, 185, 211);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 input {
@@ -55,7 +63,7 @@ input {
     width: 32%;
     text-align: center;
     background-color: rgb(234, 208, 250);
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #recipe-submit-btn:hover,
@@ -63,7 +71,7 @@ input {
 #genre-submit-btn:hover,
 #refresh-movie-btn:hover {
     background-color: rgba(200, 143, 233, 0.563);
-    cursor: pointer;
+    /* cursor: pointer; */
     color: lemonchiffon
 }
 
@@ -105,7 +113,7 @@ button:active {
     border: none;
     border-radius: 10px;
     padding: 1.5%;
-    margin: 25px;
+    margin: 2%;
 }
 
 /* MOVIE DISPLAY */
@@ -138,7 +146,7 @@ button:active {
     border: none;
     border-radius: 10px;
     padding: 1.5%;
-    margin: 25px;
+    margin: 2%;
 }
 
 .movie-a {
