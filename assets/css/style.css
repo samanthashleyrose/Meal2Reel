@@ -5,21 +5,17 @@
 body {
     background-color: rgb(84, 74, 87);
     background: linear-gradient(to top, rgb(86, 65, 97), rgb(46, 26, 55));
-    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
     font-family: 'Archivo Black';
 }
 
 /* HEADER */
-header {
+.header-container {
+    justify-content: center;
     text-align: center;
     margin: 5%;
-}
-
-.header-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
 }
 
 #title {
@@ -35,7 +31,7 @@ header {
 #description {
     font-size: 1.4rem;
     color: rgba(201, 185, 211, 0.7);
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
@@ -178,3 +174,4 @@ li::marker {
 ul {
     padding-left: 0%;
 }
+
