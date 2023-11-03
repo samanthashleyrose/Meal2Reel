@@ -6,8 +6,8 @@ body {
     background-color: rgb(84, 74, 87);
     background: linear-gradient(to top, rgb(86, 65, 97), rgb(46, 26, 55));
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    background-size: contain;
+    /* min-height: 100vh; */
     font-family: 'Archivo Black';
 }
 
@@ -177,24 +177,25 @@ ul {
 
 /* XXS */
 @media (min-width: 300px) and (max-width: 400px){
+    body {
+        min-width: none;
+    }
     #title {
-        font-size: 3.5rem;
-        color: rgb(201, 185, 211);
+        font-size: 3rem;
     }
     #info {
-        font-size: 1.1rem;
-        color: rgb(146, 110, 169);
+        font-size: .97rem;
     }
     #description {
-        font-size: .8rem;
-        margin-left: 10%;
-        margin-right: 10%;
+        font-size: .7rem;
+        margin-left: 12%;
+        margin-right: 12%;
     }
     label {
-        font-size: 1.4rem;
+        font-size: .97rem;
     }
     input {
-        font-size: .8rem;
+        font-size: .7rem;
         width: 70%;
     }
     #recipe-submit-btn,
@@ -203,9 +204,9 @@ ul {
     #refresh-movie-btn {
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    font-size: .8rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: .7rem;
     }
     .recipe-card,
     .movie-card {
@@ -213,14 +214,14 @@ ul {
         width: 100%;
     }
     h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     img {
         height: 175px;
         justify-content: center;
     }
     li {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 }
 
@@ -228,11 +229,9 @@ ul {
 @media (min-width: 401px) and (max-width: 500px) {
     #title {
         font-size: 4rem;
-        color: rgb(201, 185, 211);
     }
     #info {
-        font-size: 1.2rem;
-        color: rgb(146, 110, 169);
+        font-size: 1.3rem;
     }
     #description {
         font-size: 1rem;
@@ -240,11 +239,11 @@ ul {
         margin-right: 10%;
     }
     label {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     input {
         font-size: .9rem;
-        width: 60%;
+        width: 58%;
     }
     #recipe-submit-btn,
     #refresh-recipe-btn,
@@ -252,9 +251,9 @@ ul {
     #refresh-movie-btn {
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    font-size: .8rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: .9rem;
     }
     .recipe-card,
     .movie-card {
@@ -262,7 +261,7 @@ ul {
         width: 100%;
     }
     h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     img {
         height: 200px;
@@ -276,20 +275,18 @@ ul {
 /* S */
 @media (min-width: 501px) and (max-width: 600px) {
     #title {
-        font-size: 4.2rem;
-        color: rgb(201, 185, 211);
+        font-size: 4.6rem;
     }
     #info {
-        font-size: 1.4rem;
-        color: rgb(146, 110, 169);
+        font-size: 1.5rem;
     }
     #description {
-        font-size: 1rem;
-        margin-left: 14%;
-        margin-right: 14%;
+        font-size: 1.1rem;
+        margin-left: 9.6%;
+        margin-right: 9.6%;
     }
     label {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     input {
         font-size: 1rem;
@@ -301,9 +298,9 @@ ul {
     #refresh-movie-btn {
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    font-size: .8rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 1rem;
     }
     .recipe-card,
     .movie-card {
@@ -311,7 +308,7 @@ ul {
         width: 100%;
     }
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     img {
         height: 200px;
