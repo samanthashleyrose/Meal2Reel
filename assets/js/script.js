@@ -4,7 +4,7 @@ const movieSubmitBtn = document.getElementById('genre-submit-btn');
 const movieRefreshBtn = document.getElementById('refresh-movie-btn');
 var edamamAppID = "d55761af"
 var edamamAPIKey = "4dd514756747177099b4472f62002d79"
-var watchModeAPIKey = "xsVPrQhegCVFwP7yQKzZsWsGMKT7VMQE6ZiwJmgi"
+var watchModeAPIKey = "8O83ZFl9jtMfdFpNwJDfIs5iTREGEjLEaltcXfEK"
 
 
 var listOfGenres = [
