@@ -63,15 +63,16 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 ## Creators
+
 <li>Samantha Rose <link><a href="https://github.com/samanthashleyrose">GitHub Portfolio</a></link></li>
-During the creation of this project, Sam was mainly responsible for designing the site. She set up the genral layout in HTML and brought the page to life with CSS. Together, Chris and Sam made the site mobile-responsive with Media Queries. 
+- During the creation of this project, Sam was mainly responsible for designing the site. She set up the general layout in HTML and brought the page to life with CSS.
 <li>Chris Rice <link><a href="https://github.com/SnipaMasta">GitHub Portfolio</a></link></li>
-Marking / elevator pitch / ideas
+- Marking / elevator pitch / ideas
 Responsible for README desccription
 <li>Remi Goddu <link><a href="https://github.com/rgoddu">GitHub Portfolio</a></link></li>
-JS fetch and api 
+- JS fetch and api 
 
-With these semi-designated jobs, the team used Pair Programming to achieve a common goal and make sure everything is cohesive. 
+In addition to these semi-designated jobs, the team used Pair Programming to achieve a common goal and maintain a cohesive site. 
 
 ## License
 
