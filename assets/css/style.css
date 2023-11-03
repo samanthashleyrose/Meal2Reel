@@ -96,8 +96,6 @@ button:active {
     border-radius: 10px;
     padding: 3%;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #recipe-submit-btn,
@@ -178,25 +176,25 @@ ul {
 /* RESPONSIVENESS */
 
 /* XXS */
-@media (min-width: 300px) {
+@media (min-width: 300px) and (max-width: 400px){
     #title {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
         color: rgb(201, 185, 211);
     }
     #info {
-        font-size: .9rem;
+        font-size: 1.1rem;
         color: rgb(146, 110, 169);
     }
     #description {
         font-size: .8rem;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     label {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     input {
-        font-size: .7rem;
+        font-size: .8rem;
         width: 70%;
     }
     #recipe-submit-btn,
@@ -207,23 +205,22 @@ ul {
     padding-bottom: 2%;
     padding-left: 4%;
     padding-right: 4%;
-    font-size: .7rem;
+    font-size: .8rem;
     }
-    .recipe-card {
+    .recipe-card,
+    .movie-card {
         height: 100%;
         width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    img {
-        height: 100px;
-        justify-content: center;
     }
     h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+    img {
+        height: 175px;
+        justify-content: center;
     }
     li {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 }
 
