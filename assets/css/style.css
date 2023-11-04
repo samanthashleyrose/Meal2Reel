@@ -1,3 +1,4 @@
+/* UNIVERSAL - MAIN */
 * {
     margin: 0%;
 }
@@ -62,6 +63,7 @@ input {
     font-size: 1rem;
 }
 
+/* BUTTONS */
 #recipe-submit-btn:hover,
 #refresh-recipe-btn:hover,
 #genre-submit-btn:hover,
