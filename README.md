@@ -2,7 +2,7 @@
 
 ## Description
 
-Our project is a website designed to address real-world challenges by seamlessly integrating data from multiple server-side API requests. Motivated by the need for a versatile platform that simplifies the culinary and entertainment decision-making process, we embarked on this project to offer users an efficient solution. The site serves as a one-stop destination for those seeking culinary inspiration or looking for their next movie or TV show to watch.
+<link><a href="https://samanthashleyrose.github.io/Meal2Reel/">Meal2Reel</a></link> is a website designed to address real-world challenges by seamlessly integrating data from multiple server-side API requests. Motivated by the need for a versatile platform that simplifies the culinary and entertainment decision-making process, we embarked on this project to offer users an efficient solution. The site serves as a one-stop destination for those seeking culinary inspiration or looking for their next movie or TV show to watch.
 
 It solves the problem of decision fatigue by providing users with random recipe suggestions based on their cravings, allowing them to explore a wide array of dishes effortlessly. Simultaneously, the Movie Generator offers random movie or TV show recommendations, complete with a list of streaming services for easy access. In the process of developing this project, we acquired valuable insights into API integration, data retrieval, and user-friendly design principles. This experience allowed us to create a site that not only caters to users' diverse preferences but also enhances their online experiences.
 
