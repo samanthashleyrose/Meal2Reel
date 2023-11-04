@@ -29,7 +29,7 @@ To make the most of our site, follow these straightforward steps:
 
 3. **Discover More Options:** If the first recipe doesn't pique your interest, click "Refresh" to generate a new recipe while keeping the same keyword. This flexibility ensures you find the perfect dish that suits your mood.
 
-4. **Search for Something New- Recipes:** Should you decide to explore other culinary options, type a new keyword into the input text box and click "Submit" once again. This process allows you to seamlessly transition between various recipe choices.
+4. **Search for Something New - Recipes:** Should you decide to explore other culinary options, type a new keyword into the input text box and click "Submit" once again. This process allows you to seamlessly transition between various recipe choices.
 
 5. **Exploring Recipes and Nutrition:** To view the details of a recipe and access its nutritional information, right-click the recipe title and open the link in a new tab. This provides you with in-depth insights into the dish you're interested in.
 
@@ -51,7 +51,7 @@ These steps make it simple to explore and enjoy our site's features, whether you
 
 In this section, we will provide you with a visual demonstration of our project's key features. By including a demo video, we aim to offer a clear and engaging overview of how the site works in practice. This video will showcase the site's functionality, making it easier for users to understand its capabilities and how to effectively utilize its features.
 
-Insert link to demo video here.
+https://github.com/samanthashleyrose/Meal2Reel/assets/142939966/4162ecb5-b249-4357-a068-58c57071feba
 
 ## Credits
 
@@ -88,17 +88,15 @@ Feel free to explore these exciting future developments and contribute to our pr
 
 When utilizing our site, should you encounter any challenges or have suggestions for improvement, please don't hesitate to contact any of the creators. You also have the opportunity to contribute to our project by opening issues or submitting pull requests via this repository.
 
-Feel free to report any concerns, propose improvements, or offer suggestions.
+You're welcome to report any concerns, propose improvements, or offer suggestions.
 
 ## Creators
 
 #### <link>Samantha Rose <a href="https://github.com/samanthashleyrose">GitHub Portfolio</a></link>
-During the project's development, Sam took on the primary responsibility for the site's design. She established the fundamental layout in HTML and brought the page to life through CSS. Collaboratively with Chris, Sam ensured the site's mobile responsiveness using Media Queries.
-
-Sam harnessed available resources and exhibited inventive problem-solving to achieve the desired design. When confronted with errors or challenges, she methodically explored multiple solutions to select the optimal ones, thereby enhancing the site's user experience.
+During the project's development, Sam took on the primary responsibility for the site's design. She established the fundamental layout in HTML and brought the page to life through CSS. Collaboratively with Chris, Sam ensured the site's mobile responsiveness using Media Queries. Sam harnessed available resources and exhibited inventive problem-solving to achieve the desired design. When confronted with errors or challenges, she methodically explored multiple solutions to select the optimal ones, thereby enhancing the site's user experience.
 
 ####  <link>Chris Rice <a href="https://github.com/SnipaMasta">GitHub Portfolio</a></link>
-The visionary behind our project, Chris significantly elevated our site by contributing innovative ideas and valuable suggestions. He took charge of crafting the Elevator Pitch and README Description. Moreover, Chris played a pivotal role in the development process by collaborating on all project files. He skillfully addressed media query issues in partnership with Sam and resolved double-clicking issues alongside Remi. His indispensable contributions were foundational to the project's success.
+The visionary behind Meal2Reel, Chris significantly elevated our site by contributing innovative ideas and valuable suggestions. He took charge of crafting the Elevator Pitch and README Description. Moreover, Chris played a pivotal role in the development process by collaborating on all project files. He skillfully addressed media query issues in partnership with Sam and resolved double-clicking issues alongside Remi. His indispensable contributions were foundational to the project's success.
 
 #### <link>Remi Goddu <a href="https://github.com/rgoddu">GitHub Portfolio</a></link>
 Remi was entrusted with the API component of the project. As a team, we meticulously reviewed the documentation for each API, and Remi adeptly crafted the fetch calls to acquire the desired responses. Once we had established a working foundation, we applied pair programming techniques to troubleshoot any code-related issues we encountered. Remi's profound knowledge and expertise in JavaScript were instrumental in the triumph of Meal2Reel.
