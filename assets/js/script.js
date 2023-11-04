@@ -311,11 +311,12 @@ function getMovie() {
             let divForPoster = document.createElement('div');
             divForPoster.appendChild(populateMoviePoster);
             movieCard.appendChild(divForPoster);
-
+            
             // MOVIE PLOT
             let moviePlot = data.plot_overview;
             let populateMoviePlot = document.createElement('p');
             populateMoviePlot.textContent = moviePlot;
+            movieCard.appendChild(populateMoviePlot);
             console.log("MOVIE PLOT:", moviePlot);
 
             // Keeps duplicate streaming services from displaying
