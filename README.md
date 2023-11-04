@@ -1,19 +1,12 @@
-# project-1
+# Meal2Reel
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+<link><a href="https://samanthashleyrose.github.io/Meal2Reel/">Meal2Reel</a></link> is a website designed to address real-world challenges by seamlessly integrating data from multiple server-side API requests. Motivated by the need for a versatile platform that simplifies the culinary and entertainment decision-making process, we embarked on this project to offer users an efficient solution. The site serves as a one-stop destination for those seeking culinary inspiration or looking for their next movie or TV show to watch.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+It solves the problem of decision fatigue by providing users with random recipe suggestions based on their cravings, allowing them to explore a wide array of dishes effortlessly. Simultaneously, the Movie Generator offers random movie or TV show recommendations, complete with a list of streaming services for easy access. In the process of developing this project, we acquired valuable insights into API integration, data retrieval, and user-friendly design principles. This experience allowed us to create a site that not only caters to users' diverse preferences but also enhances their online experiences.
 
-A site that solves a real-world problem by integrating data received from multiple server-side API requests.
-
-ADD google slides presentation
-
-## Table of Contents (Optional)
+## Table of Contents
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
@@ -21,6 +14,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [Usage](#usage)
 - [Features](#features)
 - [Credits](#credits)
+- [Creators](#creators)
 - [License](#license)
 
 ## Installation
@@ -49,10 +43,11 @@ To make the most of our site, follow these straightforward steps:
 
 These steps make it simple to explore and enjoy our site's features, whether you're searching for recipes or deciding on your next movie or TV show to watch.
 
+![Meal2Reel Empty Screenshot](./assets/images/Meal2Reel-Empty-SC.png)
+![Meal2Reel Populated Screenshot](./assets/images/Meal2Reel-Populated-SC.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+**Mobile View**
+![Meal2Reel Mobile View Screenshot](./assets/images/Meal2Reel-Populated-FullsizeSC.png)
 
 ## Features
 
@@ -76,7 +71,22 @@ Insert link to demo video here.
 <li><link><a href="https://www.geeksforgeeks.org/how-to-remove-duplicates-from-an-array-of-objects-using-javascript/">GeeksForGeeks</a></link></li>
 <li><link><a href="https://builtin.com/software-engineering-perspectives/remove-duplicates-from-array-javascript">Builtin</a></link></li>
 
-## How to Contribute
+#### View our presentation here:
+<li><link><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></link></li>
+
+## Future Development:
+
+**Diversify Content:** Enhance user experience by implementing the ability to select between movies and TV shows. This will provide users with a wider range of entertainment options.
+
+**Recipe Filters:** Integrate radio buttons within the recipe section, allowing users to easily filter recipes based on dietary preferences such as vegan, dairy-free, kosher, and more. This feature will make it convenient for users to find recipes that suit their specific needs.
+
+**Local Recipe Storage:** Implement a local recipe storage feature within the application. This will eliminate the need to fetch recipes from external APIs, improving performance and providing a more seamless experience.
+
+**Contributions Welcome:** We welcome contributions from the community to further enhance our application. If you have ideas or features you'd like to add, please refer to the **How to Contribute** section of this README and consider becoming a part of our development efforts.
+
+Feel free to explore these exciting future developments and contribute to our project. Your input and support are highly appreciated!
+
+## How to Contribute 
 
 When utilizing our site, should you encounter any challenges or have suggestions for improvement, please don't hesitate to contact any of the creators. You also have the opportunity to contribute to our project by opening issues or submitting pull requests via this repository.
 
@@ -92,7 +102,7 @@ Sam harnessed available resources and exhibited inventive problem-solving to ach
 ####  <link>Chris Rice <a href="https://github.com/SnipaMasta">GitHub Portfolio</a></link>
 The visionary behind our project, Chris significantly elevated our site by contributing innovative ideas and valuable suggestions. He took charge of crafting the Elevator Pitch and README Description. Moreover, Chris played a pivotal role in the development process by collaborating on all project files. He skillfully addressed media query issues in partnership with Sam and resolved double-clicking issues alongside Remi. His indispensable contributions were foundational to the project's success.
 
-#### <link>Remi <a href="https://github.com/rgoddu">GitHub Portfolio</a></link>
+#### <link>Remi Goddu <a href="https://github.com/rgoddu">GitHub Portfolio</a></link>
 Remi was entrusted with the API component of the project. As a team, we meticulously reviewed the documentation for each API, and Remi adeptly crafted the fetch calls to acquire the desired responses. Once we had established a working foundation, we applied pair programming techniques to troubleshoot any code-related issues we encountered. Remi's profound knowledge and expertise in JavaScript were instrumental in the triumph of Meal2Reel.
 
 #### Summary
