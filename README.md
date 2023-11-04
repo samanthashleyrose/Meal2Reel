@@ -43,10 +43,11 @@ To make the most of our site, follow these straightforward steps:
 
 These steps make it simple to explore and enjoy our site's features, whether you're searching for recipes or deciding on your next movie or TV show to watch.
 
+![Meal2Reel Empty Screenshot](./assets/images/Meal2Reel-Empty-SC.png)
+![Meal2Reel Populated Screenshot](./assets/images/Meal2Reel-Populated-SC.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+**Mobile View**
+![Meal2Reel Mobile View Screenshot](./assets/images/Meal2Reel-Populated-FullsizeSC.png)
 
 ## Features
 
