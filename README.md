@@ -8,8 +8,6 @@ It solves the problem of decision fatigue by providing users with random recipe 
 
 ## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
