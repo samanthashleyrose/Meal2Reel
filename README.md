@@ -1,4 +1,4 @@
-# project-1
+# Meal2Reel
 
 ## Description
 
