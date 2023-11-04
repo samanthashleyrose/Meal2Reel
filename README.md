@@ -74,7 +74,19 @@ Insert link to demo video here.
 #### View our presentation here:
 <li><link><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></link></li>
 
-## How to Contribute
+## Future Development:
+
+**Diversify Content:** Enhance user experience by implementing the ability to select between movies and TV shows. This will provide users with a wider range of entertainment options.
+
+**Recipe Filters:** Integrate radio buttons within the recipe section, allowing users to easily filter recipes based on dietary preferences such as vegan, dairy-free, kosher, and more. This feature will make it convenient for users to find recipes that suit their specific needs.
+
+**Local Recipe Storage:** Implement a local recipe storage feature within the application. This will eliminate the need to fetch recipes from external APIs, improving performance and providing a more seamless experience.
+
+**Contributions Welcome:** We welcome contributions from the community to further enhance our application. If you have ideas or features you'd like to add, please refer to the **How to Contribute** section of this README and consider becoming a part of our development efforts.
+
+Feel free to explore these exciting future developments and contribute to our project. Your input and support are highly appreciated!
+
+## How to Contribute 
 
 When utilizing our site, should you encounter any challenges or have suggestions for improvement, please don't hesitate to contact any of the creators. You also have the opportunity to contribute to our project by opening issues or submitting pull requests via this repository.
 
