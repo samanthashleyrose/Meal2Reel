@@ -423,3 +423,13 @@ recipeRefreshBtn.addEventListener('dblclick', (event) => {
 movieRefreshBtn.addEventListener('dblclick', (event) => {
     event.preventDefault();
 });
+
+// Function to save to local storage
+function saveRecipeToLocalStorage() {
+
+};
+
+// Function to get from local storage
+function getRecipeFromLocalStorage() {
+
+};
