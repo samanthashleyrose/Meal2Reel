@@ -11,8 +11,10 @@ It solves the problem of decision fatigue by providing users with random recipe 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Credits](#credits)
+- [Future Development](#future-development)
+- [How To Contribute](#how-to-contribute)
 - [Creators](#creators)
+- [Credits](#credits)
 - [License](#license)
 
 ## Installation
@@ -53,24 +55,6 @@ In this section, we will provide you with a visual demonstration of our project'
 
 https://github.com/samanthashleyrose/Meal2Reel/assets/142939966/4162ecb5-b249-4357-a068-58c57071feba
 
-## Credits
-
-#### Knowledge Assitance From:
-<li>Lee Warrick <link><a href="https://leewarrick.com/">Personal Portfolio</a></link></li>
-<li>Mia Ciasullo <link><a href="https://github.com/miacias">GitHub Portfolio</a></link></li>
-
-#### Technologies Used:
-<li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
-<li><link><a href="https://fonts.google.com/specimen/Archivo+Black?query=Archivo+Black">Google Fonts</a></link></li>
-<li><link><a href="https://api.watchmode.com/">Watchmode API</a></link></li>
-<li><link><a href="https://developer.edamam.com/edamam-recipe-api">Edamam API</a></link></li>
-
-#### Documentation Used:
-<li><link><a href="https://www.geeksforgeeks.org/how-to-remove-duplicates-from-an-array-of-objects-using-javascript/">GeeksForGeeks</a></link></li>
-<li><link><a href="https://builtin.com/software-engineering-perspectives/remove-duplicates-from-array-javascript">Builtin</a></link></li>
-
-#### View our presentation here:
-<li><link><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></link></li>
 
 ## Future Development:
 
@@ -103,6 +87,25 @@ Remi was entrusted with the API component of the project. As a team, we meticulo
 
 #### Summary
 By leveraging our individual strengths, we engaged in a collaborative learning process, challenging each other to grow while building Meal2Reel. By employing pair programming alongside our distinct focus areas, we effectively pursued a common goal. This approach allowed us to provide mutual support and tackle challenges more efficiently as they arose during our respective tasks.
+
+## Credits
+
+#### Knowledge Assitance From:
+<li>Lee Warrick <link><a href="https://leewarrick.com/">Personal Portfolio</a></link></li>
+<li>Mia Ciasullo <link><a href="https://github.com/miacias">GitHub Portfolio</a></link></li>
+
+#### Technologies Used:
+<li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
+<li><link><a href="https://fonts.google.com/specimen/Archivo+Black?query=Archivo+Black">Google Fonts</a></link></li>
+<li><link><a href="https://api.watchmode.com/">Watchmode API</a></link></li>
+<li><link><a href="https://developer.edamam.com/edamam-recipe-api">Edamam API</a></link></li>
+
+#### Documentation Used:
+<li><link><a href="https://www.geeksforgeeks.org/how-to-remove-duplicates-from-an-array-of-objects-using-javascript/">GeeksForGeeks</a></link></li>
+<li><link><a href="https://builtin.com/software-engineering-perspectives/remove-duplicates-from-array-javascript">Builtin</a></link></li>
+
+#### View our presentation here:
+<li><link><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></link></li>
 
 ## License
 
