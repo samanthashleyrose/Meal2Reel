@@ -2,7 +2,13 @@
 * {
     margin: 0%;
 }
-
+#refresh-movie-btn:disabled:hover,#refresh-recipe-btn:disabled:hover{
+    background-color: rgba(156, 75, 203, 0.51);
+}
+#refresh-movie-btn:disabled:active,#refresh-recipe-btn:disabled:active{
+    background-color: rgba(156, 75, 203, 0.51);
+    transform: translateY(0px);
+}
 body {
     background-color: rgb(84, 74, 87);
     background: linear-gradient(to top, rgb(86, 65, 97), rgb(46, 26, 55));
@@ -11,7 +17,11 @@ body {
     min-height: 125vh;
     font-family: 'Archivo Black';
 }
-
+.error-message{
+    color: rgb(201, 185, 211);
+    margin-bottom: 20px;
+    /* -webkit-text-stroke: .4px rgb(139, 129, 129); */
+}
 /* HEADER */
 .header-container {
     justify-content: center;
