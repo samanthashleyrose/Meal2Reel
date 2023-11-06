@@ -196,17 +196,24 @@ var listOfGenres = [
     }
 ]
 
-localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
-if (localStorageMovieContainer === null) {
-    movieRefreshBtn.setAttribute("style", "cursor: no-drop")
-    movieRefreshBtn.disabled = true
-}
-localStorageRecipeContainer = JSON.parse(localStorage.getItem("localStorageRecipeContainer"))
-if (localStorageRecipeContainer === null) {
-    recipeRefreshBtn.setAttribute("style", "cursor: no-drop")
+function init() {
+    localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
+    if (localStorageMovieContainer === null) {
+        movieRefreshBtn.setAttribute("style", "cursor: no-drop")
+        movieRefreshBtn.disabled = true
+    }
+    localStorageRecipeContainer = JSON.parse(localStorage.getItem("localStorageRecipeContainer"))
+    if (localStorageRecipeContainer === null) {
+        recipeRefreshBtn.setAttribute("style", "cursor: no-drop")
+        recipeRefreshBtn.disabled = true
+    }
 }
 // Function to use Edamam API to generate random recipe with user input
 function getEdamamRecipe(searchQuery) {
+
+    recipeRefreshBtn.removeAttribute("style")
+    recipeRefreshBtn.disabled = false
+
     var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q=" + searchQuery + "&app_id=" + edamamAppID + "&app_key=" + edamamAPIKey + "&random=true";
 
     fetch(edamamRecipeURL)
@@ -261,8 +268,8 @@ function getEdamamRecipe(searchQuery) {
 
 // Function to use Watchmode API to generate random movie/TV show with user input
 function getMovie(correctGenre) {
-movieRefreshBtn.removeAttribute("style")
-movieRefreshBtn.disabled = false
+    movieRefreshBtn.removeAttribute("style")
+    movieRefreshBtn.disabled = false
     // Fetch to populate movie/TV show based off genre
     var movieURL = 'https://api.watchmode.com/v1/list-titles/?append_to_response=sources&apiKey=' + watchModeAPIKey + "&genres=" + correctGenre;
 
@@ -386,7 +393,6 @@ function clearMovie() {
 // Recipe Submit Button
 function handleRecipeSubmitBtn(event) {
     event.preventDefault();
-    recipeRefreshBtn.removeAttribute("style")
 
     var localStorageRecipeContainer = {}
     var searchQuery = document.getElementById('recipe-input').value;
@@ -440,10 +446,10 @@ function handleMovieRefreshBtn(event) {
     clearMovie();
     localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
     if (localStorageMovieContainer === null) {
-   return
+        return
     } else {
         correctGenre = localStorageMovieContainer.storageGenre
-    } 
+    }
     getMovie(correctGenre);
 };
 
@@ -467,12 +473,4 @@ movieRefreshBtn.addEventListener('dblclick', (event) => {
     event.preventDefault();
 });
 
-// Function to save to local storage
-function saveRecipeToLocalStorage() {
-
-};
-
-// Function to get from local storage
-function getRecipeFromLocalStorage() {
-
-};
+init()

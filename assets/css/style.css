@@ -2,10 +2,10 @@
 * {
     margin: 0%;
 }
-#refresh-movie-btn:disabled:hover{
+#refresh-movie-btn:disabled:hover,#refresh-recipe-btn:disabled:hover{
     background-color: rgba(156, 75, 203, 0.51);
 }
-#refresh-movie-btn:disabled:active{
+#refresh-movie-btn:disabled:active,#refresh-recipe-btn:disabled:active{
     background-color: rgba(156, 75, 203, 0.51);
     transform: translateY(0px);
 }
