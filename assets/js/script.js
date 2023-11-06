@@ -198,6 +198,9 @@ var listOfGenres = [
 
 //This function checks the local storage upon the page loading in. If the local storage is empty, the refresh buttons are unusable, so it sets the buttons to disabled. This function gets called at the bottom of the page.
 function init() {
+    document.getElementById('info').setAttribute("class","fade")
+    document.getElementsByClassName('movie-form-container').setAttribute("class","fade")
+    document.getElementsByClassName('recipe-form-container').setAttribute("class","fade")
     localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
     if (localStorageMovieContainer === null) {
         movieRefreshBtn.setAttribute("style", "cursor: no-drop")
@@ -459,7 +462,17 @@ recipeSubmitBtn.addEventListener('click', handleRecipeSubmitBtn);
 movieSubmitBtn.addEventListener('click', handleMovieSubmitBtn);
 recipeRefreshBtn.addEventListener('click', handleRecipeRefreshBtn);
 movieRefreshBtn.addEventListener('click', handleMovieRefreshBtn);
-
+document.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(function() {
+        document.getElementById("info").className = '';
+    }, 500);
+    window.setTimeout(function() {
+        document.getElementsByClassName("recipe-form-container").className = '';
+    }, 1200);
+    window.setTimeout(function() {
+        document.getElementsByClassName("movie-form-container").className = '';
+    }, 1200);
+});
 // Button Event Listners to avoid multi-clicking
 recipeSubmitBtn.addEventListener('dblclick', (event) => {
     event.preventDefault();
