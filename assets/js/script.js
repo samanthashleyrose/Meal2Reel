@@ -196,10 +196,17 @@ var listOfGenres = [
     }
 ]
 
+localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
+if (localStorageMovieContainer === null) {
+    movieRefreshBtn.setAttribute("style", "cursor: no-drop")
+    movieRefreshBtn.disabled = true
+}
+localStorageRecipeContainer = JSON.parse(localStorage.getItem("localStorageRecipeContainer"))
+if (localStorageRecipeContainer === null) {
+    recipeRefreshBtn.setAttribute("style", "cursor: no-drop")
+}
 // Function to use Edamam API to generate random recipe with user input
-function getEdamamRecipe() {
-    
-    var searchQuery = document.getElementById('recipe-input').value;
+function getEdamamRecipe(searchQuery) {
     var edamamRecipeURL = "https://api.edamam.com/api/recipes/v2?type=public&q=" + searchQuery + "&app_id=" + edamamAppID + "&app_key=" + edamamAPIKey + "&random=true";
 
     fetch(edamamRecipeURL)
@@ -211,155 +218,157 @@ function getEdamamRecipe() {
             console.log("RECIPE INFO:", data);
 
             clearRecipe();
+            if (data.count === 0) {
+                let recipeContainer = document.querySelector('.recipe-container');
+                let noRecipeFoundMessage = document.createElement('h2');
+                noRecipeFoundMessage.textContent = "No recipe was found. Please try again with a different input."
+                recipeContainer.appendChild(noRecipeFoundMessage)
+                noRecipeFoundMessage.setAttribute('class', 'error-message');
+                console.log("error");
+            }
+            else {
+                // RECIPE TITLE
+                let recipeTitle = document.createElement('h2');
+                let populateRecipeTitle = data.hits[randomRecipeNumber].recipe.label;
+                console.log("RECIPE TITLE:", populateRecipeTitle);
 
-            // RECIPE TITLE
-            let recipeTitle = document.createElement('h2');
-            let populateRecipeTitle = data.hits[randomRecipeNumber].recipe.label;
-            console.log("RECIPE TITLE:", populateRecipeTitle);
 
-            // RECIPE IMAGE
-            let recipeImage = data.hits[randomRecipeNumber].recipe.image;
-            let populateRecipeImage = document.createElement('img');
-            populateRecipeImage.setAttribute('src', recipeImage);
-            console.log("RECIPE IMAGE:", recipeImage);
-            
-            // RECIPE LINK 
-            let recipeLink = data.hits[randomRecipeNumber].recipe.shareAs;
-            console.log("RECIPE LINK:", recipeLink);
+                // RECIPE IMAGE
+                let recipeImage = data.hits[randomRecipeNumber].recipe.image;
+                let populateRecipeImage = document.createElement('img');
+                populateRecipeImage.setAttribute('src', recipeImage);
+                console.log("RECIPE IMAGE:", recipeImage);
 
-            // POPULATES RECIPE CONTAINER
-            let recipeContainer = document.querySelector('.recipe-container');
-            let recipeCard = document.createElement('a');
-            
-            recipeCard.setAttribute('class', 'recipe-card');
-            recipeCard.setAttribute('href', recipeLink);
+                // RECIPE LINK 
+                let recipeLink = data.hits[randomRecipeNumber].recipe.shareAs;
+                console.log("RECIPE LINK:", recipeLink);
 
-            recipeTitle.textContent = populateRecipeTitle;
-            recipeCard.appendChild(recipeTitle);
-            
-            recipeCard.appendChild(populateRecipeImage);
-            recipeContainer.appendChild(recipeCard);
+                // POPULATES RECIPE CONTAINER
+                let recipeContainer = document.querySelector('.recipe-container');
+                let recipeCard = document.createElement('a');
+
+                recipeCard.setAttribute('class', 'recipe-card');
+                recipeCard.setAttribute('href', recipeLink);
+
+                recipeTitle.textContent = populateRecipeTitle;
+                recipeCard.appendChild(recipeTitle);
+
+                recipeCard.appendChild(populateRecipeImage);
+                recipeContainer.appendChild(recipeCard);
+            }
         });
 };
 
 // Function to use Watchmode API to generate random movie/TV show with user input
-function getMovie() {
-
-    // Allows API to filter by genre entered by user -- Defaults to RANDOMGENRE if entered keyword is unusable
-    var movieGenre = document.getElementById('genre-input').value;
-    movieGenre.trim();
-    let correctGenre = 'RANDOMGENRE';
-    var adjustedmovieGenre = movieGenre.toUpperCase();
-
-    for (x = 0; x < listOfGenres.length; x++) {
-        var compare = listOfGenres[x].name.toUpperCase();
-
-        if (adjustedmovieGenre === compare) {
-            console.log("nice!" + listOfGenres[x].id);
-            correctGenre = listOfGenres[x].id;
-            break;
-        };
-    };
-    
+function getMovie(correctGenre) {
+movieRefreshBtn.removeAttribute("style")
+movieRefreshBtn.disabled = false
     // Fetch to populate movie/TV show based off genre
     var movieURL = 'https://api.watchmode.com/v1/list-titles/?append_to_response=sources&apiKey=' + watchModeAPIKey + "&genres=" + correctGenre;
-    
+
     fetch(movieURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        var randomMovieNumber = Math.floor(Math.random() * data.titles.length);
-        console.log('MOVIE TITLE DATA:', data);
-        
-        clearMovie();
-        
-        // MOVIE TITLE
-        let movieTitle = document.createElement('h2');
-        let populateMovieTitle = data.titles[randomMovieNumber].title;
-        console.log("MOVIE TITLE:", populateMovieTitle);
-        
-        // POPULATES TITLE TO MOVIE CONTAINER
-        let movieContainer = document.querySelector('.movie-container');
-        let movieCard = document.createElement('div');
-        
-        movieCard.setAttribute('class', 'movie-card');
-        movieTitle.textContent = populateMovieTitle;
-        movieCard.appendChild(movieTitle);
-        movieContainer.appendChild(movieCard);
-
-        // Fetch to generate additional movie/TV show info
-        var imbdTag = data.titles[randomMovieNumber].imdb_id 
-        var movieInfoURL = "https://api.watchmode.com/v1/title/"+imbdTag+"/details/?apiKey="+watchModeAPIKey+"&append_to_response=sources";
-
-        fetch(movieInfoURL)
-        .then(function(response){
+        .then(function (response) {
             return response.json();
-            })
-            .then(function(data){
-            console.log("MOVIE INFO:", data);
+        })
+        .then(function (data) {
+            var randomMovieNumber = Math.floor(Math.random() * data.titles.length);
+            console.log('MOVIE TITLE DATA:', data);
 
             clearMovie();
+            // MOVIE TITLE
+            let movieTitle = document.createElement('h2');
+            let populateMovieTitle = data.titles[randomMovieNumber].title;
+            console.log("MOVIE TITLE:", populateMovieTitle);
 
-            // MOVIE POSTER
-            let moviePoster = data.poster;
-            let populateMoviePoster = document.createElement('img');
-            populateMoviePoster.setAttribute('src', moviePoster);
-            console.log("MOVIE POSTER:", moviePoster);
-            
-            // CREATES POSTER DIV
-            let divForPoster = document.createElement('div');
-            divForPoster.appendChild(populateMoviePoster);
-            movieCard.appendChild(divForPoster);
-            
-            // MOVIE PLOT
-            let moviePlot = data.plot_overview;
-            let populateMoviePlot = document.createElement('p');
-            populateMoviePlot.textContent = moviePlot;
-            movieCard.appendChild(populateMoviePlot);
-            console.log("MOVIE PLOT:", moviePlot);
+            // POPULATES TITLE TO MOVIE CONTAINER
+            let movieContainer = document.querySelector('.movie-container');
+            let movieCard = document.createElement('div');
 
-            // Keeps duplicate streaming services from displaying
-            let newArray = [];
-            let uniqueObject = {};
-
-            for (let i in data.sources) {
-                let objName = data.sources[i]['name'];
-                uniqueObject[objName] = data.sources[i];
-            };
-
-            for (i in uniqueObject) {
-                newArray.push(uniqueObject[i]);
-            };
-            
-            // MOVIE STREAMING
-            let divForPlatform = document.createElement('ul');
-
-            for (b = 0; b < newArray.length; b++) {
-                
-                let movieStreamingPlatform = newArray[b].name;
-                console.log("MOVIE STREAMING ON:", movieStreamingPlatform);
-                
-                let movieStreamingURL = newArray[b].web_url;
-                console.log("MOVIE STREAMING URL:", movieStreamingURL);
-                
-                let populateMovieStreamingInfo = document.createElement('a');
-                populateMovieStreamingInfo.textContent = movieStreamingPlatform;
-                populateMovieStreamingInfo.setAttribute('class', 'movie-a')
-                populateMovieStreamingInfo.setAttribute('href',movieStreamingURL);
-                
-                // CREATES PLATFORM DIV
-                let platformList = document.createElement('li');
-                platformList.appendChild(populateMovieStreamingInfo);
-                divForPlatform.appendChild(platformList);
-            }
-            
-            // POPULATES MOVIE INFO TO MOVIE CONTAINER
             movieCard.setAttribute('class', 'movie-card');
-            movieCard.appendChild(divForPlatform);
-            movieContainer.appendChild(movieCard);           
-            });
-    });
+            movieTitle.textContent = populateMovieTitle;
+            movieCard.appendChild(movieTitle);
+            movieContainer.appendChild(movieCard);
+
+            // Fetch to generate additional movie/TV show info
+            var imbdTag = data.titles[randomMovieNumber].imdb_id
+            var movieInfoURL = "https://api.watchmode.com/v1/title/" + imbdTag + "/details/?apiKey=" + watchModeAPIKey + "&append_to_response=sources";
+
+            fetch(movieInfoURL)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log("MOVIE INFO:", data);
+
+                    clearMovie();
+
+                    // MOVIE POSTER
+                    let moviePoster = data.poster;
+                    let populateMoviePoster = document.createElement('img');
+                    populateMoviePoster.setAttribute('src', moviePoster);
+                    console.log("MOVIE POSTER:", moviePoster);
+
+                    // CREATES POSTER DIV
+                    let divForPoster = document.createElement('div');
+                    divForPoster.appendChild(populateMoviePoster);
+                    movieCard.appendChild(divForPoster);
+
+                    // MOVIE PLOT
+                    let moviePlot = data.plot_overview;
+                    let populateMoviePlot = document.createElement('p');
+                    populateMoviePlot.textContent = moviePlot;
+                    movieCard.appendChild(populateMoviePlot);
+                    console.log("MOVIE PLOT:", moviePlot);
+
+                    // Keeps duplicate streaming services from displaying
+                    let newArray = [];
+                    let uniqueObject = {};
+
+                    for (let i in data.sources) {
+                        let objName = data.sources[i]['name'];
+                        uniqueObject[objName] = data.sources[i];
+                    };
+
+                    for (i in uniqueObject) {
+                        newArray.push(uniqueObject[i]);
+                    };
+
+                    // MOVIE STREAMING
+                    let divForPlatform = document.createElement('ul');
+
+                    for (b = 0; b < newArray.length; b++) {
+
+                        let movieStreamingPlatform = newArray[b].name;
+                        console.log("MOVIE STREAMING ON:", movieStreamingPlatform);
+
+                        let movieStreamingURL = newArray[b].web_url;
+                        console.log("MOVIE STREAMING URL:", movieStreamingURL);
+
+                        let populateMovieStreamingInfo = document.createElement('a');
+                        populateMovieStreamingInfo.textContent = movieStreamingPlatform;
+                        populateMovieStreamingInfo.setAttribute('class', 'movie-a')
+                        populateMovieStreamingInfo.setAttribute('href', movieStreamingURL);
+
+                        // CREATES PLATFORM DIV
+                        let platformList = document.createElement('li');
+                        platformList.appendChild(populateMovieStreamingInfo);
+                        divForPlatform.appendChild(platformList);
+                    }
+
+                    if (correctGenre === "RANDOMGENRE") {
+                        // let movieContainer = document.querySelector('.movie-container');
+                        let movieError = document.createElement('h2');
+                        movieError.setAttribute('class', 'error-message')
+                        movieError.textContent = "No genre was found based on the given input. This is a random search result."
+                        movieContainer.appendChild(movieError);
+                    }
+                    // POPULATES MOVIE INFO TO MOVIE CONTAINER
+                    movieCard.setAttribute('class', 'movie-card');
+                    movieCard.appendChild(divForPlatform);
+                    movieContainer.appendChild(movieCard);
+
+                });
+        });
 };
 
 // Function to clear the recipe container
@@ -377,31 +386,65 @@ function clearMovie() {
 // Recipe Submit Button
 function handleRecipeSubmitBtn(event) {
     event.preventDefault();
-    console.log('Recipe Submit Button Clicked');
-    getEdamamRecipe();
+    recipeRefreshBtn.removeAttribute("style")
+
+    var localStorageRecipeContainer = {}
+    var searchQuery = document.getElementById('recipe-input').value;
+    localStorageRecipeContainer.storageRecipe = searchQuery
+    // console.log(localStorageRecipeContainer)
+    localStorage.setItem("localStorageRecipeContainer", JSON.stringify(localStorageRecipeContainer))
+    getEdamamRecipe(searchQuery);
+    document.getElementById('recipe-input').value = ""
+
 };
 
 // Movie Submit Button
 function handleMovieSubmitBtn(event) {
     event.preventDefault();
-    console.log('Movie Submit Button Clicked');
-    getMovie();
+
+    // Allows API to filter by genre entered by user -- Defaults to RANDOMGENRE if entered keyword is unusable
+    var movieGenre = document.getElementById('genre-input').value;
+    movieGenre.trim();
+    let correctGenre = 'RANDOMGENRE';
+    var adjustedmovieGenre = movieGenre.toUpperCase();
+
+    for (x = 0; x < listOfGenres.length; x++) {
+        var compare = listOfGenres[x].name.toUpperCase();
+
+        if (adjustedmovieGenre === compare) {
+            console.log("nice!" + listOfGenres[x].id);
+            correctGenre = listOfGenres[x].id;
+            break;
+        };
+    };
+    var localStorageMovieContainer = {}
+    localStorageMovieContainer.storageGenre = correctGenre
+    localStorage.setItem("localStorageMovieContainer", JSON.stringify(localStorageMovieContainer))
+    getMovie(correctGenre);
+    document.getElementById('genre-input').value = ""
 };
 
 // Recipe Refresh Button
 function handleRecipeRefreshBtn(event) {
     event.preventDefault();
-    console.log('Recipe Refresh Button Clicked');
+
     clearRecipe();
-    getEdamamRecipe();
+    localStorageRecipeContainer = JSON.parse(localStorage.getItem("localStorageRecipeContainer"))
+    searchQuery = localStorageRecipeContainer.storageRecipe
+    getEdamamRecipe(searchQuery);
 };
 
 // Movie Refresh Button
 function handleMovieRefreshBtn(event) {
     event.preventDefault();
-    console.log('Movie Refresh Button Clicked');
     clearMovie();
-    getMovie();
+    localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
+    if (localStorageMovieContainer === null) {
+   return
+    } else {
+        correctGenre = localStorageMovieContainer.storageGenre
+    } 
+    getMovie(correctGenre);
 };
 
 // Button Event Listeners
