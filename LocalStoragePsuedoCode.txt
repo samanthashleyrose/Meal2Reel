@@ -1,0 +1,8 @@
+When submit button is clicked:
+1. User input is saved to an object in local storage (via JSON.stringify)
+2. Function runs and HTML input field is cleared (textcontent set to empty string)
+
+When refresh button is clicked:
+1. Local storage is parsed for previously entered user input
+2. Function runs based off of previous input
+3. HTML input field is cleared again
