@@ -55,6 +55,11 @@ In this section, we will provide you with a visual demonstration of our project'
 
 https://github.com/samanthashleyrose/Meal2Reel/assets/142939966/4162ecb5-b249-4357-a068-58c57071feba
 
+**Additional Features:**
+
+- When a user submits a query with an empty input field or an invalid word, the site will prompt the user with a clear message: 'No recipe was found. Please try again with a different input.' Similarly, if the user provides no genre or an unrecognized genre, the message 'No genre was found based on the given input. This is a random search result.' will be displayed.
+- To enhance user experience, when hovering over the refresh button before any recipes are displayed, the cursor will change to a forbidden symbol, and the button will remain inactive until a recipe is available.
+- Additionally, user input is securely stored in local storage, ensuring data privacy and seamless interactions.
 
 ## Future Development:
 
