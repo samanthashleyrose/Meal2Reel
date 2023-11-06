@@ -196,6 +196,7 @@ var listOfGenres = [
     }
 ]
 
+//This function checks the local storage upon the page loading in. If the local storage is empty, the refresh buttons are unusable, so it sets the buttons to disabled. This function gets called at the bottom of the page.
 function init() {
     localStorageMovieContainer = JSON.parse(localStorage.getItem("localStorageMovieContainer"))
     if (localStorageMovieContainer === null) {
@@ -301,8 +302,8 @@ function getMovie(correctGenre) {
             var movieInfoURL = "https://api.watchmode.com/v1/title/" + imbdTag + "/details/?apiKey=" + watchModeAPIKey + "&append_to_response=sources";
 
             fetch(movieInfoURL)
-                .then(function (response) {
-                    return response.json();
+                .then(function (meatloaf) {
+                    return meatloaf.json();
                 })
                 .then(function (data) {
                     console.log("MOVIE INFO:", data);
