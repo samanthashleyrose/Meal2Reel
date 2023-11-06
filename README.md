@@ -37,7 +37,7 @@ To make the most of our site, follow these straightforward steps:
 
 6. **Movie Generator:** Our Movie Generator works in a similar fashion. Enter a movie genre, such as "action," and click "Submit" to receive a random action movie or TV show suggestion, complete with a list of streaming services.
 
-7. **Search for Something New - Movies:** Using the movie submit/refresh button works similarly. Enter a differnt movie genre, such as "comedy" and click "Submit" to receive a new random comedy movie or TV show suggestion.
+7. **Search for Something New - Movies:** Using the movie submit/refresh button works similarly. Enter a different movie genre, such as "comedy" and click "Submit" to receive a new random comedy movie or TV show suggestion.
 
 8. **Watch Your Movie:** To watch your selected movie, right-click the title of the desired streaming service and open the link in a new tab, making it easy to enjoy your chosen entertainment.
 
