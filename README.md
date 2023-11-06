@@ -29,7 +29,7 @@ To make the most of our site, follow these straightforward steps:
 
 2. **Generate a Random Recipe:** After entering your keyword, simply click "Submit," and the system will generate a random recipe tailored to your selection. If the initial result doesn't quite hit the mark, don't worry.
 
-3. **Discover More Options:** If the first recipe doesn't pique your interest, click "Refresh" to generate a new recipe while keeping the same keyword. This flexibility ensures you find the perfect dish that suits your mood.
+3. **Discover More Options!:** If the first recipe doesn't pique your interest, click "Refresh" to generate a new recipe while keeping the same keyword. This flexibility ensures you find the perfect dish that suits your mood.
 
 4. **Search for Something New - Recipes:** Should you decide to explore other culinary options, type a new keyword into the input text box and click "Submit" once again. This process allows you to seamlessly transition between various recipe choices.
 
