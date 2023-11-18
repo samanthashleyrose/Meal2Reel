@@ -2,7 +2,7 @@
 
 ## Description
 
-<link><a href="https://samanthashleyrose.github.io/Meal2Reel/">Meal2Reel</a></link> is a website designed to address real-world challenges by seamlessly integrating data from multiple server-side API requests. Motivated by the need for a versatile platform that simplifies the culinary and entertainment decision-making process, we embarked on this project to offer users an efficient solution. The site serves as a one-stop destination for those seeking culinary inspiration or looking for their next movie or TV show to watch.
+<a href="https://samanthashleyrose.github.io/Meal2Reel/">Meal2Reel</a> is a website designed to address real-world challenges by seamlessly integrating data from multiple server-side API requests. Motivated by the need for a versatile platform that simplifies the culinary and entertainment decision-making process, we embarked on this project to offer users an efficient solution. The site serves as a one-stop destination for those seeking culinary inspiration or looking for their next movie or TV show to watch.
 
 It solves the problem of decision fatigue by providing users with random recipe suggestions based on their cravings, allowing them to explore a wide array of dishes effortlessly. Simultaneously, the Movie Generator offers random movie or TV show recommendations, complete with a list of streaming services for easy access. In the process of developing this project, we acquired valuable insights into API integration, data retrieval, and user-friendly design principles. This experience allowed us to create a site that not only caters to users' diverse preferences but also enhances their online experiences.
 
@@ -81,13 +81,13 @@ You're welcome to report any concerns, propose improvements, or offer suggestion
 
 ## Creators
 
-#### <link>Samantha Rose <a href="https://github.com/samanthashleyrose">GitHub Portfolio</a></link>
+#### Samantha Rose <a href="https://github.com/samanthashleyrose">GitHub Portfolio</a>
 During the project's development, Sam took on the primary responsibility for the site's design. She created a wirefram to establish the fundamental layout, and used HyperText Markup Language (HTML) and Cascading Style Sheets (CSS) to bring the page to life. Sam harnessed available resources and exhibited inventive problem-solving to achieve the desired design. Collaboratively with Chris, she ensured the site's mobile responsiveness using Media Queries. Sam was also largely reponsible for the successful implementation of JavaScript in taking user input, initiating an API call, and writing the results to the page. When confronted with errors or challenges, she methodically explored multiple solutions in order to optimize the user's experience.
 
-####  <link>Chris Rice <a href="https://github.com/SnipaMasta">GitHub Portfolio</a></link>
+####  Chris Rice <a href="https://github.com/SnipaMasta">GitHub Portfolio</a>
 The visionary behind Meal2Reel, Chris significantly elevated the site by contributing innovative ideas and valuable suggestions. He took charge of crafting the Elevator Pitch and README Description. Moreover, Chris played a pivotal role in the development process by collaborating on all project files. He skillfully addressed media query issues in partnership with Sam and resolved double-clicking issues alongside Remi. His indispensable contributions during pair programming sessions were key in sparking unique & well crafted ideas and opening new avenues of problem solving. His creativity & depth of understanding of every part of the process were foundational to the project's success.
 
-#### <link>Remi Goddu <a href="https://github.com/rgoddu">GitHub Portfolio</a></link>
+#### Remi Goddu <a href="https://github.com/rgoddu">GitHub Portfolio</a>
 Remi was entrusted with the API component of the project. As a team, we meticulously reviewed the documentation for each API, and Remi adeptly crafted the fetch calls to acquire the desired responses. Once we had established a working foundation, we applied pair programming techniques to troubleshoot any code-related issues we encountered. Remi's profound knowledge and expertise in JavaScript were instrumental in the triumph of Meal2Reel.
 
 #### Summary
@@ -96,21 +96,21 @@ By leveraging our individual strengths, we engaged in a collaborative learning p
 ## Credits
 
 #### Knowledge Assitance From:
-<li>Lee Warrick <link><a href="https://leewarrick.com/">Personal Portfolio</a></link></li>
-<li>Mia Ciasullo <link><a href="https://github.com/miacias">GitHub Portfolio</a></link></li>
+<li>Lee Warrick <a href="https://leewarrick.com/">Personal Portfolio</a></li>
+<li>Mia Ciasullo <a href="https://github.com/miacias">GitHub Portfolio</a></li>
 
 #### Technologies Used:
-<li><link><a href="https://chat.openai.com/">ChatGPT</a></link></li>
-<li><link><a href="https://fonts.google.com/specimen/Archivo+Black?query=Archivo+Black">Google Fonts</a></link></li>
-<li><link><a href="https://api.watchmode.com/">Watchmode API</a></link></li>
-<li><link><a href="https://developer.edamam.com/edamam-recipe-api">Edamam API</a></link></li>
+<li><a href="https://chat.openai.com/">ChatGPT</a></li>
+<li><a href="https://fonts.google.com/specimen/Archivo+Black?query=Archivo+Black">Google Fonts</a></li>
+<li><a href="https://api.watchmode.com/">Watchmode API</a></li>
+<li><a href="https://developer.edamam.com/edamam-recipe-api">Edamam API</a></li>
 
 #### Documentation Used:
-<li><link><a href="https://www.geeksforgeeks.org/how-to-remove-duplicates-from-an-array-of-objects-using-javascript/">GeeksForGeeks</a></link></li>
-<li><link><a href="https://builtin.com/software-engineering-perspectives/remove-duplicates-from-array-javascript">Builtin</a></link></li>
+<li><a href="https://www.geeksforgeeks.org/how-to-remove-duplicates-from-an-array-of-objects-using-javascript/">GeeksForGeeks</a></li>
+<li><a href="https://builtin.com/software-engineering-perspectives/remove-duplicates-from-array-javascript">Builtin</a></li>
 
 #### View our presentation here:
-<li><link><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></link></li>
+<li><a href="https://docs.google.com/presentation/d/19IN6k8lLyVzbBYzuFEJyvN3xCaj3FHqN40BbkBk_CtM/edit#slide=id.g29302b580d9_0_49">Meal2Reel Google Slides Presentation</a></li>
 
 ## License
 
