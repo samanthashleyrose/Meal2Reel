@@ -95,7 +95,7 @@ By leveraging our individual strengths, we engaged in a collaborative learning p
 
 ## Credits
 
-#### Knowledge Assitance From:
+#### Knowledge Assistance From:
 <li>Lee Warrick <a href="https://leewarrick.com/">Personal Portfolio</a></li>
 <li>Mia Ciasullo <a href="https://github.com/miacias">GitHub Portfolio</a></li>
 
